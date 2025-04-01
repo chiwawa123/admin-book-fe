@@ -27,7 +27,7 @@ export class LoginComponent {
       this.authService.login(this.user).subscribe(
         (response: AuthResponse) => {
           localStorage.setItem('token', response.token);  // Save token in local storage (optional)
-          this.router.navigate(['']);  // Redirect to dashboard
+          this.router.navigate(['/dashboard']);  // Redirect to dashboard
         }
       );
     }
